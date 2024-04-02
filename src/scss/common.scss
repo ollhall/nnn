@@ -1,0 +1,296 @@
+// ЗАГОЛОВКИ, ОБЩИЕ БЭМ БЛОКИ и прочее....
+
+//<ОСНОВНОЙ БЛОК>===========================================
+.page {
+  // .page__top
+  &__top {
+    @include adaptiv-value("padding-top", 73, 30, 1);
+    @include adaptiv-value("padding-bottom", 67, 45, 1);
+  }
+  // .page__info
+  &__info {
+    @include adaptiv-value("margin-bottom", 120, 45, 1);
+  }
+  // .page__news
+  &__news {
+    @include adaptiv-value("margin-bottom", 80, 45, 1);
+  }
+  // .page__events
+  &__events {
+    @include adaptiv-value("padding-top", 100, 45, 1);
+    @include adaptiv-value("padding-bottom", 120, 45, 1);
+  }
+  &__initiatives {
+    @include adaptiv-value("padding-top", 80, 45, 1);
+    @include adaptiv-value("padding-bottom", 160, 45, 1);
+  }
+  // .page__projects
+  &__projects {
+    @include adaptiv-value("padding-bottom", 120, 45, 1);
+  }
+  // .page__edition
+  &__edition {
+    @include adaptiv-value("padding-bottom", 80, 45, 1);
+  }
+  // .page__partners
+  &__partners {
+    @include adaptiv-value("padding-top", 96, 45, 1);
+    @include adaptiv-value("padding-bottom", 96, 45, 1);
+  }
+  // .page__about
+  &__about {
+    @include adaptiv-value("padding-top", 65, 50, 1);
+    @include adaptiv-value("padding-bottom", 120, 45, 1);
+  }
+  // .page__vision
+  &__vision {
+    @include adaptiv-value("padding-bottom", 120, 45, 1);
+  }
+  // .page__activity
+  &__activity {
+    @include adaptiv-value("padding-bottom", 80, 45, 1);
+  }
+  // .page__directions
+  &__directions {
+    @include adaptiv-value("padding-top", 100, 45, 1);
+    @include adaptiv-value("padding-bottom", 120, 45, 1);
+  }
+  // .page__secretariat
+  &__secretariat {
+    @include adaptiv-value("padding-top", 80, 45, 1);
+    @include adaptiv-value("padding-bottom", 120, 45, 1);
+  }
+  // .page__information
+  &__information {
+    @include adaptiv-value("padding-bottom", 127, 45, 1);
+  }
+  // .page__reports
+  &__reports {
+    @include adaptiv-value("padding-bottom", 162, 70, 1);
+  }
+  // .page__intro
+  &__intro {
+  }
+  // .page__project
+  &__project {
+    @include adaptiv-value("padding-top", 64, 50, 1);
+    @include adaptiv-value("padding-bottom", 162, 70, 1);
+  }
+  // .page__single-project
+  &__single-project {
+    @include adaptiv-value("padding-bottom", 120, 60, 1);
+  }
+  // .page__goal
+  &__goal {
+    @include adaptiv-value("padding-bottom", 120, 55, 1);
+  }
+  &__activities {
+    @include adaptiv-value("padding-bottom", 160, 62, 1);
+  }
+  &__other{
+    @include adaptiv-value("padding-bottom", 162, 80, 1);
+  }
+}
+
+//</ОСНОВНОЙ БЛОК>===========================================
+
+//=============================================================
+.title {
+  font-family: UkraineHead;
+  @include adaptiv-value("font-size", 40, 24, 1);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: em(-0.84, 40);
+  color: $blueNavy;
+}
+.title-litle {
+  font-family: UkraineHead;
+  @include adaptiv-value("font-size", 36, 22, 1);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: em(-0.72, 36);
+  color: $blueNavy;
+  &:not(:last-child) {
+    @include adaptiv-value("margin-bottom", 32, 24, 1);
+  }
+}
+//=======================================================
+.top-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:not(:last-child) {
+    @include adaptiv-value("margin-bottom", 32, 24, 1);
+  }
+  // .top-block__title
+  &__title {
+    font-family: UkraineHead;
+    @include adaptiv-value("font-size", 36, 22, 1);
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: em(-0.72, 36);
+    color: $blueNavy;
+  }
+  // .top-block__btn
+  &__btn {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: rem(58);
+    font-size: rem(15);
+    line-height: normal;
+    text-transform: uppercase;
+    padding-left: rem(32);
+    border: rem(1) solid $blueNavy;
+    background-color: $baseWhite;
+    @media (max-width: $mobile) {
+      justify-content: center;
+      padding: 0 rem(15);
+      font-size: rem(14);
+      background-color: $blueNavy;
+      color: $baseWhite;
+    }
+    &::before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(58);
+      height: rem(58);
+      color: $baseWhite;
+      background-color: $blueNavy;
+      margin-left: rem(32);
+      @media (max-width: $mobile) {
+        content: none;
+      }
+    }
+  }
+}
+//======================================================
+.top-head {
+  display: flex;
+  align-items: center;
+  gap: rem(24);
+  @include adaptiv-value("height", 112, 80, 1);
+  @include adaptiv-value("padding-left", 32, 20, 1);
+  @include adaptiv-value("padding-right", 51, 20, 1);
+  background-color: $blueNavy;
+  &__img {
+    @include adaptiv-value("width", 64, 48, 1);
+    @include adaptiv-value("height", 64, 48, 1);
+  }
+  // .info__title
+  &__title {
+    @include adaptiv-value("font-size", 22, 18, 1);
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: em(-0.44, 22);
+    color: $baseWhite;
+  }
+}
+//======================================================
+.tag-item {
+  @include adaptiv-value("font-size", 16, 15, 1);
+  padding: rem(8) rem(12);
+  line-height: normal;
+  letter-spacing: em(-0.16, 16);
+  border-radius: rem(100);
+  background-color: $blue;
+  color: $baseWhite;
+}
+.tag-status {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  @include adaptiv-value("font-size", 16, 15, 1);
+  letter-spacing: em(-0.16, 16);
+  color: $grey;
+}
+//=============================================================
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  word-break: normal;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.screen-reader-text {
+  &_1 {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    word-break: normal;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
+//================================================================
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 10;
+  font-size: 0;
+  width: rem(58);
+  height: rem(58);
+  border: rem(1) solid $blueNavy;
+  border-radius: 50%;
+  @media (max-width: em(1400)) {
+    display: none !important;
+  }
+}
+.slick-arrow.slick-prev {
+  left: -7%;
+  background: url(../img/arrow-left.svg) 0 0 no-repeat;
+  background-position: center;
+  background-color: $baseWhite;
+}
+.slick-arrow.slick-next {
+  right: -7%;
+  background: url(../img/arrow-right.svg) 0 0 no-repeat;
+  background-position: center;
+  background-color: $baseWhite;
+}
+//============================================
+.slick-dots {
+  display: flex;
+  gap: rem(16);
+  justify-content: center;
+  @include adaptiv-value("margin-top", 32, 24, 1);
+}
+.slick-dots .slick-sr-only {
+  font-size: 0;
+}
+.slick-dots {
+  li {
+    display: inline-block;
+    width: rem(8);
+    height: rem(8);
+    border-radius: 50%;
+    background-color: rgba(0, 45, 77, 0.3);
+    cursor: pointer;
+  }
+}
+.slick-dots .slick-active {
+  width: rem(32);
+  border-radius: rem(100);
+  background-color: $blueNavy;
+}

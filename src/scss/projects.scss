@@ -1,0 +1,170 @@
+//================================
+.project {
+  // .project__container
+  &__container {
+  }
+  &__wrapper {
+    @include adaptiv-value("padding-left", 15, 0, 1);
+    @include adaptiv-value("padding-right", 15, 0, 1);
+  }
+  // .project__title
+  &__title {
+    @include adaptiv-value("margin-bottom", 32, 24, 1);
+  }
+  // .project__filter
+  &__filter {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    @include adaptiv-value("gap", 24, 16, 1);
+    @include adaptiv-value("margin-bottom", 32, 24, 1);
+  }
+  // .project__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: rem(1) solid rgba(0, 45, 77, 0.1);
+  }
+}
+
+.filter-project {
+  // .filter-project__item
+  &__item {
+    select {
+      width: 100%;
+      padding: rem(12) rem(13) rem(12) rem(16);
+      @include adaptiv-value("font-size", 16, 15, 1);
+      letter-spacing: em(-0.16, 16);
+      color: $blueNavy;
+      background-color: $seasalt;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      z-index: 1;
+    }
+  }
+}
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+.custom-select::after {
+  content: "\e908";
+  @extend %ic;
+  position: absolute;
+  font-size: rem(12);
+  top: 50%;
+  right: rem(13);
+  transform: translateY(-50%) rotate(90deg);
+  pointer-events: none;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include adaptiv-value("gap", 30, 24, 1);
+  @include adaptiv-value("margin-bottom", 32, 24, 1);
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: rem(24);
+  }
+  @media (max-width: em(650)) {
+    grid-template-columns: 1fr;
+  }
+  // .project-grid__item
+  &__item {
+  }
+}
+.item-project {
+  // .item-project__images-ibg
+  &__images-ibg {
+    width: 100%;
+    @include adaptiv-value("padding-bottom", 260, 200, 1);
+  }
+  // .item-project__content
+  &__content {
+    display: grid;
+    height: 100%;
+    @include adaptiv-value("gap", 16, 12, 1);
+    @include adaptiv-value("padding-top", 32, 20, 1);
+    @include adaptiv-value("padding-right", 32, 20, 1);
+    @include adaptiv-value("padding-bottom", 32, 20, 1);
+    @include adaptiv-value("padding-left", 32, 20, 1);
+  }
+  // .item-project__info
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+    @include adaptiv-value("font-size", 16, 15, 1);
+    letter-spacing: em(-0.16, 16);
+    color: $grey;
+  }
+  // .item-project__status
+  &__status {
+   
+  }
+  // .item-project__type
+  &__type {
+  }
+  // .item-project__title
+  &__title {
+    @include adaptiv-value("font-size", 22, 18, 1);
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: em(-0.44, 22);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  // .item-project__text
+  &__text {
+    @include adaptiv-value("font-size", 16, 15, 1);
+    letter-spacing: em(-0.16, 16);
+    line-height: 170%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  // .item-project__tags
+  &__tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+    @include adaptiv-value("margin-bottom", 16, 12, 1);
+  }
+  // .item-project__tag
+  &__tag {
+  }
+  // .item-project__date
+  &__date {
+    @include adaptiv-value("font-size", 16, 15, 1);
+    color: $grey;
+    letter-spacing: em(-0.16, 16);
+  }
+  // .item-project__btn
+  &__btn {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $blueNavy;
+    height: rem(58);
+    padding: 0 rem (10);
+    @include adaptiv-value("font-size", 15, 14, 1);
+    font-weight: 400;
+    color: $blueNavy;
+    text-transform: uppercase;
+    margin-top: auto;
+    &::before {
+      color: $blueNavy;
+      margin-left: rem(12);
+    }
+  }
+}

@@ -1,0 +1,91 @@
+// Tab*********************************************************
+
+// .tabs {
+// 	position: relative;
+// 	&__list {
+// 		list-style-type: none;
+// 		padding: 0;
+// 		margin: 0;
+// 		display: flex;
+// 		align-items: center;
+// 		@media (max-width: $tablet) {
+// 			flex-wrap: wrap;
+// 		}
+// 	}
+// 	&__btn {
+// 		@include adaptiv-value("padding-top", 20, 10, 1);
+// 		@include adaptiv-value("padding-bottom", 18, 10, 1);
+// 		@include adaptiv-value("padding-left", 30, 10, 1);
+// 		@include adaptiv-value("padding-right", 30, 10, 1);
+// 		color: $mainColor;
+// 		cursor: pointer;
+// 		border: 1px solid rgba(20, 20, 20, 0.5);
+// 		font-family: SquadaOne;
+// 		font-weight: 400;
+// 		@include adaptiv-value("font-size", 28, 22, 1);
+// 		line-height: math.div(30, 28);
+// 		text-align: center;
+// 		letter-spacing: 0.06em;
+// 		text-transform: uppercase;
+// 		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+// 		@media (any-hover: hover) {
+// 			&:hover {
+// 				background-color: rgba(20, 20, 20, 0.5);
+// 				color: #fff;
+// 			}
+// 		}
+// 		&--active {
+// 			background-color: $mainColor;
+// 			color: #1d1a1f;
+// 			transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+// 			pointer-events: none;
+// 		}
+// 	}
+// 	&__content {
+// 		display: none;
+// 		border: rem(2) solid #f8f5e5;
+// 		background-color: transparent;
+// 		&--active {
+// 			display: block;
+// 		}
+// 	}
+// }
+
+// .content {
+// 	@include adaptiv-value("padding-top", 50, 10, 1);
+// 	@include adaptiv-value("padding-bottom", 50, 10, 1);
+// 	@include adaptiv-value("padding-left", 50, 10, 1);
+// 	@include adaptiv-value("padding-right", 50, 10, 1);
+// }
+
+// MyTabs=======================================================
+
+.tabs {
+  &__panel {
+    display: none;
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+  }
+
+  &__panel--active {
+    display: block;
+  }
+
+  &__nav-btn {
+    &:focus {
+      color: #fff;
+      background-color: navy;
+    }
+  }
+
+  &__nav-btn--active {
+    background-color: wheat;
+  }
+}
+
+
+
+//==================================================================

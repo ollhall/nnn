@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/head.html',{
+"title":""
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html',{})
+    <main class="page">
+      <section class="page__project project">
+        <div class="project__container">
+          <div class="project__wrapper">
+            <h1 class="project__title title">
+              Проєкти
+            </h1>
+            <div class="project__filter filter-project">
+              <div class="filter-project__item">
+                <div class="custom-select">
+                  <label for="filter" style="display: none;">Виберить тип:</label>
+                  <select id="filter" aria-labelledby="filterLabel">
+                    <option value="" selected>Всі типи</option>
+                    <option value="category1">Тип 1</option>
+                    <option value="category2">Тип 2</option>
+                    <option value="category3">Тип 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="filter-project__item">
+                <div class="custom-select">
+                  <label for="filter" style="display: none;">Виберить категорію:</label>
+                  <select id="filter" aria-labelledby="filterLabel">
+                    <option value="" selected>Всі категорії</option>
+                    <option value="category1">Категорія 1</option>
+                    <option value="category2">Категорія 2</option>
+                    <option value="category3">Категорія 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="filter-project__item">
+                <div class="custom-select">
+                  <label for="filter" style="display: none;">Виберить статус:</label>
+                  <select id="filter" aria-labelledby="filterLabel">
+                    <option value="" selected>Всі статуси</option>
+                    <option value="category1">Статус 1</option>
+                    <option value="category2">Статус 2</option>
+                    <option value="category3">Статус 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="filter-project__item">
+                <div class="custom-select">
+                  <label for="filter" style="display: none;">Виберить рік:</label>
+                  <select id="filter" aria-labelledby="filterLabel">
+                    <option value="" selected>Всі роки</option>
+                    <option value="category1">2022</option>
+                    <option value="category2">2023</option>
+                    <option value="category3">2024</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <ul class="project-grid">
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/01.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/realized.svg" alt="Реалізується">
+                        Реалізується
+                      </div>
+                      <div class="item-project__type">Проєкт</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Багатосекторальна гуманітарна допомога для ВПО, репатріантів, ветеранів та їх приймаючих громад
+                        в
+                        Україні
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Гуманітарний</a>
+                      <a class="item-project__date" href="#">2023 – 2024</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/02.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/realized.svg" alt="Реалізується">
+                        Реалізується
+                      </div>
+                      <div class="item-project__type">Проєкт</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Надання міжсекторальної гуманітарної допомоги постраждалому від конфлікту населенню в Україні
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших
+                      умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Гуманітарний</a>
+                      <a class="item-project__date" href="#">2022 – 2024</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/03.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/realized.svg" alt="Реалізується">
+                        Реалізується
+                      </div>
+                      <div class="item-project__type">Проєкт</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Покращення реабілітаційних послуг в системі охорони здоров’я
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших
+                      умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Реабілітація</a>
+                      <a class="item-project__date" href="#">2022 – 2024</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/03.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/realized.svg" alt="Реалізується">
+                        Реалізується
+                      </div>
+                      <div class="item-project__type">Проєкт</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Криза в Україні: реагування та відновлення з урахуванням інвалідності
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших
+                      умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Реабілітація</a>
+                      <a class="item-project__date" href="#">2022 – 2024</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/02.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/realized.svg" alt="Реалізується">
+                        Реалізується
+                      </div>
+                      <div class="item-project__type">Проєкт</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Доступні гінекологічні послуги для кожної
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших
+                      умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Гуманітарний</a>
+                      <a class="item-project__date" href="#">2021 – 2024</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/01.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/realized.svg" alt="Реалізується">
+                        Реалізується
+                      </div>
+                      <div class="item-project__type">Проєкт</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Перспектива для дітей з інвалідністю в Україні
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших
+                      умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Гуманітарний</a>
+                      <a class="item-project__date" href="#">2023 – 2024</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/01.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/сompleted.svg" alt="Реалізується">
+                        Завершено
+                      </div>
+                      <div class="item-project__type">Інфокампанія</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Сприяння правам жінок та дівчат з інвалідністю шляхом посилення їх участі та лідерства в
+                        громадах
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших
+                      умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Гуманітарний</a>
+                      <a class="item-project__date" href="#">2023</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/02.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/сompleted.svg" alt="Реалізується">
+                        Завершено
+                      </div>
+                      <div class="item-project__type">Проєкт</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Орієнтування та мобільність: основа реабілітації осіб з порушеннями зору
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших
+                      умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Гуманітарний</a>
+                      <a class="item-project__date" href="#">2023</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+              <li class="project-grid__item">
+                <article class="project__item item-project">
+                  <a class="item-project__images-ibg" href="#">
+                    <img src="@img/projects/03.jpg" alt="Зображення">
+                  </a>
+                  <div class="item-project__content">
+                    <div class="item-project__info">
+                      <div class="item-project__status tag-status">
+                        <img src="@img/сompleted.svg" alt="Реалізується">
+                        Завершено
+                      </div>
+                      <div class="item-project__type">Проєкт</div>
+                    </div>
+                    <h3 class="item-project__title">
+                      <a href="#">
+                        Сприяння правам осіб з інвалідністю шляхом розробки інклюзивних законів та політики
+                      </a>
+                    </h3>
+                    <div class="item-project__text">
+                      Навчання людей із глибокими порушеннями зору просторовому орієнтуванню та мобільності (ОіМ) є
+                      однією
+                      з найважливіших
+                      умов компенсації порушення зору, та незалежного якісного життя.
+                    </div>
+                    <div class="item-project__tags">
+                      <a class="item-project__tag tag-item" href="#">Реабілітація</a>
+                      <a class="item-project__date" href="#">2022 – 2023</a>
+                    </div>
+                    <a class="item-project__btn _icon-arrow" href="single-projects.html">про проєкт</a>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            <div class="project__button button-center">
+              <button class="show-more__btn show-more-project">показати більше</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__intro intro">
+        <div class="intro__container">
+          <div class="intro__body">
+            <div class="intro__images">
+              <img src="@img/intro/01.png" alt="Зображення">
+            </div>
+            <div class="intro__content">
+              <h2 class="intro__title title">
+                Вступ до НАІУ
+              </h2>
+              <div class="intro__text">
+                Вам імпонує наша діяльність? Приєднуйтесь до організацій-членів Національної асамблеї людей з
+                інвалідністю України!
+              </div>
+              <a class="intro__btn btn-litle" href="#">приєднатися до НАІУ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html',{})
+  </div>
+  <!-- @@include('html/popup.html',{}) -->
+  <!-- @@include('html/popupNew.html',{}) -->
+  <!-- @@include('html/phone-button.html',{}) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

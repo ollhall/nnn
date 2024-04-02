@@ -1,0 +1,226 @@
+@use "sass:math";
+//<Подключение css>======================================
+// @import 'node_modules/swiper/swiper.scss';
+// @import "node_modules/swiper/swiper";
+// @import "node_modules/swiper/modules/effect-fade/effect-fade";
+// @import 'node_modules/air-datepicker/air-datepicker';
+//@import "node_modules/tippy.js/dist/tippy";
+//@import 'node_modules/nouislider/dist/nouislider';
+// @import 'node_modules/swiper/swiper-bundle.min.css';
+
+//</Подключение css>======================================
+//<МИКСИНЫ>=================================================
+@import "base/mixins";
+//</МИКСИНЫ>=================================================
+
+//<ШРИФТЫ>=================================================
+
+//<Подключаем шрифты>======================================
+//&display=swap&subset=cyrillic-ext - добавить при подключении через плагин
+//&display=swap - добавить при подключении через плагин
+// @import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:500,700&display=swap");
+
+@import "fonts";
+//</Подключаем шрифты>======================================
+
+//<Иконочные шрифты>=======================================
+@import "icons";
+//</Иконочные шрифты>=======================================
+
+//<Шрифт по умолчанию>======================================
+$fontsFamily: "Ukraine";
+$fontSize: rem(16);
+$fontWeight: 400;
+// $line-height: math.div(24, 17);
+$line-height: 160%;
+
+//<ОСНОВНЫЕ ЦВЕТА
+$mainColor: #00171f; // Цвет шрифта по умолчанию
+$blueNavy: #002d4d;
+$seasalt: #f7f9f9;
+$darkBlue: #00171f;
+$baseWhite: #fff;
+$blue: #0d79ce;
+$grey: #60656c;
+$lightNavy: #d8dde5;
+// $greenColor: #23b123;
+// $redColor: #f46430;
+// $grayColor: #656d72;
+// $purpleColor: #7e74f1;
+// $darkGrayColor: #616161;
+//</Шрифт по умолчанию>======================================
+
+//</ШРИФТЫ>=================================================
+
+//<НАСТРОЙКИ>==============================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1440;
+// Ширина ограничивающего контейнера
+$maxWidthContainer: 1380;
+// Оющий отступ у контейнера
+$containerPadding: 40;
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов)
+// 2 = по брейкпоинтам
+$responsiveType: 1;
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$ps: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+//</НАСТРОЙКИ>==============================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==============================
+@import "base/null";
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $fontsFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $line-height;
+  height: 100%;
+  // background-color: $backColor;
+  color: $mainColor;
+
+  &._lock {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+
+  // Сайт загружен
+  .loaded & {
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.slider {
+  &__box {
+    min-height: 0;
+    min-width: 0;
+  }
+}
+
+// Slick
+.slider-initiatives .slick-track {
+  display: flex;
+   @include adaptiv-value("column-gap", 30, 10, 1);
+}
+.slider-partners .slick-track {
+  display: flex;
+  @include adaptiv-value("column-gap", 24, 10, 1);
+
+}
+.slick-list {
+  overflow: hidden;
+}
+.slick-slide {
+  div {
+    height: 100%;
+  }
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==============================
+
+//<ОБОЛОЧКА>================================================
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  // Прижимаем footer
+  > main {
+    flex: 1 1 auto;
+  }
+
+  // Фикс для слайдеров
+  > * {
+    min-width: 0;
+  }
+}
+
+//</ОБОЛОЧКА>================================================
+
+//<ОГРАНИЧИВАЮЩИЙ КОНТЕЙНЕР>=================================
+@if ($responsiveType==1) {
+  // Отзывчивая
+  [class*="__container"] {
+    @if ($maxWidthContainer>0) {
+      max-width: rem($containerWidth);
+      margin: 0 auto;
+    }
+
+    @if ($containerPadding>0) {
+      @if ($maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      } @else {
+        @include adaptiv-value("padding-left", math.div($containerPadding, 2), 15, 1);
+        @include adaptiv-value("padding-right", math.div($containerPadding, 2), 15, 1);
+      }
+    }
+  }
+} @else {
+  // По брейк-поинтам
+  [class*="__container"] {
+    margin: 0 auto;
+
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+    } @else {
+      @if ($containerPadding>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+
+    @media (max-width: $ps) {
+      max-width: rem(970);
+    }
+
+    @media (max-width: $tablet) {
+      max-width: rem(750);
+    }
+
+    @media (max-width: $mobile) {
+      max-width: none;
+
+      @if ($containerPadding>0 and $maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+  }
+}
+
+//</ОГРАНИЧИВАЮЩИЙ КОНТЕЙНЕР>==========================================
+
+//<ПОДКЛЮЧЕНИЕ БАЗОВЫХ СТИЛЕЙ, ШАБЛОНОВ И ВСПОМОГАТЕЛЬНЫХ КЛАССОВ>====
+@import "base";
+
+//<ПОДКЛЮЧЕНИЕ СТИЛЕЙ ОБЩИХ ЭЛЕМЕНТОВ ПРОЕКТА>====
+@import "common";
+@import "forms/forms";
+
+//<ПОДКЛЮЧЕНИЕ СТИЛЕЙ ОТДЕЛЬНЫХ БЛОКОВ>===========
+@import "header";
+@import "footer";
+
+//<ПОДКЛЮЧЕНИЕ СТИЛЕЙ СТРАНИЦ>===========
+@import "index";
+@import "about";
+@import "projects";
+@import "single-projects";
+

@@ -1,0 +1,237 @@
+.footer {
+  // .footer__wrapper
+  &__wrapper {
+    background-color: $blueNavy;
+    @include adaptiv-value("padding-top", 64, 45, 1);
+    @include adaptiv-value("padding-bottom", 64, 45, 1);
+  }
+  // .footer__container
+  &__container {
+  }
+  // .footer__inner
+  &__inner {
+    @include adaptiv-value("padding-left", 15, 0, 1);
+    @include adaptiv-value("padding-right", 15, 0, 1);
+    display: flex;
+    align-items: center;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  // .footer__left
+  &__left {
+    flex: 0 1 rem(754);
+    display: flex;
+    @include adaptiv-value("gap", 64, 40, 1);
+    flex-wrap: wrap;
+    @media (min-width: $tablet) {
+      border-right: rem(1) solid rgba(247, 249, 249, 0.2);
+      @include adaptiv-value("padding-right", 65, 25, 1);
+    }
+    @media (max-width: $tablet) {
+      flex: 1;
+      border-bottom: rem(1) solid rgba(247, 249, 249, 0.2);
+      padding-bottom: rem(40);
+    }
+  }
+  // .footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+  // .footer__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    img {
+      @include adaptiv-value("width", 32, 24, 1);
+      @include adaptiv-value("height", 32, 24, 1);
+    }
+    &::before {
+      @include adaptiv-value("font-size", 26, 20, 1);
+      color: $baseWhite;
+    }
+    a {
+      @include adaptiv-value("font-size", 18, 16, 1);
+      color: $baseWhite;
+      letter-spacing: em(-0.18, 16);
+      border-bottom: 2px solid $blue;
+    }
+  }
+  // .footer__contacts
+  &__contacts {
+  }
+  // .footer__useful
+  &__useful {
+  }
+  // .footer__social
+  &__social {
+  }
+  // .footer__right
+  &__right {
+    flex: 0 1 rem(565);
+    @media (min-width: $tablet) {
+      @include adaptiv-value("padding-left", 65, 25, 1);
+    }
+    @media (max-width: $tablet) {
+      flex: 1;
+      border-top: rem(1) solid rgba(247, 249, 249, 0.2);
+      padding-top: rem(40);
+    }
+  }
+  // .footer__copy
+  &__copy {
+    background-color: #00171f;
+    @include adaptiv-value("padding-top", 40, 30, 1);
+    @include adaptiv-value("padding-bottom", 60, 38, 1);
+  }
+}
+.contacts-footer {
+  // .contacts-footer__list
+  &__list {
+  }
+  // .contacts-footer__item
+  &__item {
+  }
+  // .contacts-footer__link
+  &__link {
+  }
+}
+
+.useful-footer {
+  // .useful-footer__list
+  &__list {
+  }
+  // .useful-footer__item
+  &__item {
+  }
+  // .useful-footer__link
+  &__link {
+  }
+}
+.social-footer {
+  // .social-footer__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+  // .social-footer__item
+  &__item {
+  }
+  // .social-footer__link
+  &__link {
+  }
+}
+.left-footer {
+  &__title {
+    @include adaptiv-value("font-size", 16, 15, 1);
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: em(-0.16, 16);
+    &:not(:last-child) {
+      margin-bottom: em(16, 16);
+    }
+  }
+}
+.right-footer {
+  // .right-footer__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(46);
+    @include adaptiv-value("margin-bottom", 16, 12, 1);
+  }
+  // .right-footer__title
+  &__title {
+    max-width: rem(420);
+    @include adaptiv-value("font-size", 26, 20, 1);
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: em(-0.25, 26);
+    color: $baseWhite;
+  }
+  // .right-footer__text
+  &__text {
+    @include adaptiv-value("font-size", 16, 15, 1);
+    color: $baseWhite;
+    letter-spacing: em(-0.16, 16);
+    &:not(:last-child) {
+      margin-bottom: em(24, 16);
+    }
+  }
+}
+.form {
+  // .form__footer
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(16);
+    @media (max-width: em(570)) {
+      flex-direction: column;
+      gap: rem(12);
+    }
+  }
+}
+.footer-form {
+  // .footer-form__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    @media (max-width: em(570)) {
+      width: 100%;
+    }
+  }
+  // .footer-form__label
+  &__label {
+    @include adaptiv-value("font-size", 14, 13, 1);
+    color: $baseWhite;
+    letter-spacing: em(-0.14, 14);
+  }
+  // .footer-form__input
+  &__input {
+    max-width: rem(297);
+    height: rem(58);
+    padding: 0 rem(24);
+    border: rem(1) solid rgba(255, 255, 255, 0.5);
+    color: $baseWhite;
+    background-color: $blueNavy;
+    &::placeholder {
+      @include adaptiv-value("font-size", 16, 15, 1);
+      font-weight: 400;
+      line-height: 160%;
+      letter-spacing: em(-0.16, 16);
+      color: rgba(255, 255, 255, 0.5);
+    }
+    @media (max-width: em(570)) {
+      max-width: 100%;
+    }
+  }
+  // .footer-form__button
+  &__button {
+    width: 100%;
+    height: rem(58);
+    background-color: $blue;
+    color: $baseWhite;
+    @include adaptiv-value("font-size", 15, 14, 1);
+    line-height: normal;
+    text-transform: uppercase;
+    padding: rem(10);
+  }
+}
+.copy {
+  // .copy__text
+  &__text {
+    @include adaptiv-value("font-size", 16, 15, 1);
+    letter-spacing: em(-0.16, 16);
+    color: $baseWhite;
+    @include adaptiv-value("padding-left", 15, 0, 1);
+    @include adaptiv-value("padding-right", 15, 0, 1);
+  }
+  // .copy__link
+  &__link {
+  }
+}

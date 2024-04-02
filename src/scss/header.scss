@@ -1,0 +1,297 @@
+//=================================
+.header {
+  // .header__container
+  &__container {
+  }
+  // .header__wrapper
+  &__wrapper {
+  }
+  // .header__top
+  &__top {
+    @include adaptiv-value("height", 160, 135, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiv-value("gap", 20, 10, 1);
+    @include adaptiv-value("padding-left", 15, 0, 1);
+    @include adaptiv-value("padding-right", 15, 0, 1);
+  }
+  // .header__logo
+  &__logo {
+    img {
+      @include adaptiv-value("width", 350, 200, 1);
+    }
+  }
+  // .header__top-menu
+  &__top-menu {
+    @media (max-width: $tablet) {
+      margin-left: auto;
+    }
+  }
+  // .header__botom
+  &__botom {
+    background-color: $seasalt;
+  }
+  // .header__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiv-value("padding-left", 15, 0, 1);
+    @include adaptiv-value("padding-right", 15, 0, 1);
+  }
+  // .header__menu
+  &__menu {
+    width: 100%;
+  }
+}
+.top-header {
+  // .top-header__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(8);
+    @media (max-width: $mobile) {
+      align-items: start;
+    }
+  }
+  &__links {
+    @media (max-width: $mobile) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(10);
+    }
+    @media (max-width: em(360)) {
+      flex-direction: column;
+    }
+  }
+  // .top-header__link
+  &__link {
+    &_edf {
+      display: flex;
+      align-items: center;
+      @include adaptiv-value("gap", 12, 8, 1);
+      @include adaptiv-value("font-size", 14, 13, 1);
+      letter-spacing: em(-0.14, 14);
+      color: $blueNavy;
+      span {
+        border-bottom: rem(1) solid $blueNavy;
+      }
+    }
+    &_edf {
+      @media (max-width: $mobile) {
+        flex-direction: row-reverse;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+.header-logo {
+  // .header-logo__images
+  &__images {
+  }
+}
+.menu-top {
+  // .menu-top__body
+  &__body {
+  }
+  // .menu-top__list
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    @include adaptiv-value("gap", 32, 5, 0);
+    li {
+      a {
+        display: flex;
+        align-items: flex-end;
+        gap: rem(12);
+        @include adaptiv-value("font-size", 15, 14, 1);
+        letter-spacing: em(-0.14, 15);
+        white-space: nowrap;
+        color: $blueNavy;
+        span {
+          border-bottom: rem(1) solid $blueNavy;
+        }
+      }
+    }
+  }
+  // .menu-top__item
+  &__item {
+    &_lang {
+      img {
+        @include adaptiv-value("width", 48, 30, 1);
+        @include adaptiv-value("height", 24, 20, 1);
+      }
+      @media (max-width: $mobile) {
+        margin-left: auto;
+      }
+      span {
+        @media (max-width: $mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+  // .menu-top__link
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    font-size: rem(16);
+    letter-spacing: em(-0.14, 16);
+    white-space: nowrap;
+    color: $blueNavy;
+    span {
+      border-bottom: rem(1) solid $blueNavy;
+    }
+    &_reading {
+      @include adaptiv-value("font-size", 14, 13, 1);
+    }
+  }
+}
+.menu {
+  // .menu__body
+  &__body {
+    @media (max-width: $tablet) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      transition: left 0.3s ease 0s;
+      overflow: auto;
+      background-color: $baseWhite;
+      gap: rem(30);
+      @include adaptiv-value("padding-top", 180, 120, 1);
+      padding-left: rem(15);
+      padding-right: rem(15);
+      padding-bottom: rem(30);
+      z-index: 2;
+      &::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        @include adaptiv-value("height", 170, 72, 1);
+        top: 0;
+        left: -100%;
+        background-color: $baseWhite;
+        z-index: 2;
+        transition: left 0.3s ease 0s;
+      }
+      .menu-open & {
+        left: 0;
+        &::before {
+          left: 0;
+        }
+      }
+    }
+  }
+  // .menu__list
+  &__list {
+    min-height: rem(80);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiv-value("gap", 32, 10, 1);
+    letter-spacing: em(-0.16, 32);
+    white-space: nowrap;
+    flex-wrap: wrap;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  // .menu__item
+  &__item {
+    &_form {
+      @media (min-width: $tablet) {
+        margin-left: auto;
+      }
+    }
+  }
+  // .menu__link
+  &__link {
+  }
+}
+.search-form {
+  // .search-form__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+  }
+  // .search-form__input
+  &__input {
+    max-width: rem(152);
+    padding: 0 rem(5);
+    @media (min-width: $tablet) {
+      background-color: $seasalt;
+    }
+    &::placeholder {
+      color: $blueNavy;
+      letter-spacing: em(-0.16, 16);
+    }
+  }
+  // .search-form__btn
+  &__btn {
+  }
+}
+
+//=================================
+// Burger
+.icon-menu {
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+    position: relative;
+    flex: 0 0 rem(40);
+    height: rem(40);
+    top: rem(-24);
+    background-color: $blueNavy;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      left: 50%;
+      transform: translate(-50%, 0);
+      position: absolute;
+      width: rem(18);
+      height: rem(2);
+      background-color: $baseWhite;
+    }
+    &::before {
+      top: rem(13);
+    }
+    &::after {
+      bottom: rem(13);
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    &.menu-open {
+      span {
+        transform: scale(0);
+      }
+      &::before {
+        left: 29%;
+        transform: rotate(-45deg);
+        top: calc(50% - rem(1));
+      }
+      &::after {
+        left: 29%;
+        transform: rotate(45deg);
+        bottom: calc(50% - rem(1));
+      }
+    }
+  }
+  @media (max-width: $mobile) {
+    top: 0;
+  }
+}
+//===============================

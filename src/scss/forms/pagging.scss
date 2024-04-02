@@ -1,0 +1,46 @@
+.pagging {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include adaptiv-value("gap", 30, 15, 1);
+    @media (max-width: $mobileSmall) {
+        justify-content: center;
+    }
+
+    // .pagging__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+    }
+
+    // .pagging__item
+
+    &__item {
+    }
+
+    // .pagging__link
+
+    &__link {
+        width: rem(36);
+        height: rem(45);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &._active {
+            border: 2px solid $mainColor;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                border: 2px solid $mainColor;
+            }
+        }
+    }
+    &__button-prev,
+    &__button-next {
+        @media (max-width: $mobileSmall) {
+            display: none;
+        }
+    }
+}

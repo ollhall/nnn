@@ -1,0 +1,86 @@
+<div class="popup-user popup" id="popup-user">
+    <div class="popup-user__wrapper wrapper">
+        <div class="popup-user__body">
+            <div class="popup-user__content popup__content">
+                <button class="popup-user__btn-close close-popup"></button>
+                <div class="popup-user__title">Зарегистрируйтесь или войдите</div>
+                <form class="popup-user__form form-user">
+                    <div class="form-user__item">
+                        <label for="formPhone" class="form-user__label">Номер телефона</label>
+                        <input id="formPhone" type="tel" name="name" class="form-user__input"
+                            placeholder="Введите номер">
+                    </div>
+                </form>
+                <button class="popup-user__button button" type="button">Получить код в SMS</button>
+                <div class="popup-user__social-title">Или войдите с помощью соц. сетей</div>
+                <div class="popup-user__social-links social-popup">
+                    <a class="social-popup__item" href="#">TW</a>
+                    <a class="social-popup__item" href="#">Inst</a>
+                    <a class="social-popup__item" href="#">FB</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-total popup" id="popup-total">
+    <div class="popup-total__wrapper wrapper">
+        <div class="popup-total__body">
+            <div class="popup-total__content popup__content">
+                <button class="popup-total__btn-close close-popup"></button>
+                <div class="popup-total__title">Спасибо за заказ!</div>
+                <div class="popup-total__text">
+                    В ближайшее время с вами свяжется наш менеджер для уточнения деталей доставки
+                </div>
+                <a class="popup-total__button button" href="catalog.html">Вернуться к покупкам</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-code popup" id="popup-code">
+    <div class="popup-code__wrapper wrapper">
+        <div class="popup-code__body">
+            <div class="popup-code__content popup__content">
+                <button class="popup-code__btn-close close-popup"></button>
+                <div class="popup-code__title">Промокод неактивен</div>
+                <div class="popup-code__text">
+                    Проверьте правильность написания промокода или попробуйте другой
+                </div>
+                <a class="popup-code__button button" href="cart.html">Вернуться в корзину</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-review__bg popup-two__bg">
+    <div class="popup-review popup-two">
+        <button class="popup-review__btn-close close-popup-two"></button>
+        <div class="popup-review__wrapper">
+            <div class="popup-review__title">Оставьте отзыв об этом товаре</div>
+
+            <form class="popup-review__form form-popup-review">
+                <textarea class="form-popup-review__area"></textarea>
+
+                <div class="form-popup-review__box">
+
+                    <div class="popup-review__rating rating rating_set">
+                        <div class="rating__title">Как вы оцениваете этот товар?</div>
+                        <div class="popup-review__body rating__body">
+                            <div class="popup-review__active rating__active"></div>
+                            <div class="popup-review__items rating__items">
+                                <input class="popup-review__item rating__item" type="radio" value="1" name="rating">
+                                <input class="popup-review__item rating__item" type="radio" value="2" name="rating">
+                                <input class="popup-review__item rating__item" type="radio" value="3" name="rating">
+                                <input class="popup-review__item rating__item" type="radio" value="4" name="rating">
+                                <input class="popup-review__item rating__item" type="radio" value="5" name="rating">
+                            </div>
+                        </div>
+                        <div class="popup-review__value rating__value">0</div>
+                    </div>
+                    <button class="form-popup-review__btn border" type="submit">Оставить отзыв</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.show-more {
+  &__btn {
+    width: 100%;
+    height: rem(54);
+    font-size: rem(14);
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0 rem(10);
+    background-color: $blueNavy;
+    color: $baseWhite;
+  }
+}
+.show-more-initiatives {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+  }
+}
+.show-more-partners {
+  display: none;
+  @media (max-width: $mobileSmall) {
+    display: block;
+  }
+}
+.show-more-project,
+.show-more-activities {
+  max-width: rem(228);
+  @media (max-width: $mobileSmall) {
+    max-width: 100%;
+  }
+}
+//=======================================
+.btn-litle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(58);
+  @include adaptiv-value("font-size", 15, 13, 1);
+  padding: 0 rem(32);
+  background-color: $blueNavy;
+  color: $baseWhite;
+  text-transform: uppercase;
+  @media (max-width: $mobileSmall) {
+    width: 100%;
+  }
+}
+.button-center {
+  text-align: center;
+}
+.more-details {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  height: rem(58);
+  @include adaptiv-value("font-size", 15, 13, 1);
+  padding: 0 rem(32);
+  background-color: $baseWhite;
+  color: $blueNavy;
+  text-transform: uppercase;
+  border: rem(1) solid $blueNavy;
+  margin-top: auto;
+  &::before {
+    margin-left: rem(12);
+  }
+}

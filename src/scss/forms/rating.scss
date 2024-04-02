@@ -1,0 +1,341 @@
+.rating-product {
+    display: flex;
+    align-items: flex-end;
+    font-size: rem(16); // размер звезд
+    line-height: 0.75;
+    &__body {
+        position: relative;
+        letter-spacing: em(2, 12); // расстояние между звездами
+        &::before {
+            content: "☆☆☆☆☆";
+            display: block;
+        }
+    }
+    &__active {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        &::before {
+            content: "★★★★★";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #BB8C5F;
+        }
+    }
+    &__items {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &__item {
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+    &__value {
+        display: none; // убрать цифровой показатель
+        font-size: 50%;
+        line-height: 1;
+        padding: 0 0 0 10px;
+    }
+    &__review {
+        white-space: nowrap;
+        font-size: rem(15);
+        color: #d0d0d0;
+        margin: 0px 0px 0px rem(10);
+    }
+}
+
+//============================================================================
+
+.rating-box-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: rem(12); // размер звезд
+    line-height: 0.75;
+    &__body {
+        position: relative;
+        letter-spacing: em(2, 12); // расстояние между звездами
+        &::before {
+            content: "★★★★★";
+            display: block;
+        }
+    }
+    &__active {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        &::before {
+            content: "★★★★★";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #ffd300;
+        }
+    }
+    &__items {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &__item {
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+    &__value {
+        font-family: SquadaOne;
+        font-size: rem(48);
+        line-height: math.div(51, 48);
+    }
+    &__span {
+        font-family: SquadaOne;
+        font-size: rem(36);
+        line-height: math.div(40, 36);
+        color: #8b8980;
+    }
+    &__info {
+        font-size: rem(15);
+        color: #8b8980;
+        padding: rem(10) 0px 0px 0px;
+    }
+}
+
+.box-reviews {
+    &__value {
+        display: flex;
+        align-items: flex-end;
+        gap: rem(10);
+        margin: 0px 0px rem(10) 0px;
+    }
+}
+
+//===================================================
+
+.item-box-reviews {
+    // .item-box-reviews__rating
+
+    &__rating {
+        display: flex;
+        flex-direction: column;
+        font-size: rem(12); // размер звезд
+        line-height: 0.75;
+        &:not(:last-child) {
+            margin-bottom: em(14, 12);
+        }
+    }
+
+    // .item-box-reviews__body
+
+    &__body {
+        position: relative;
+        letter-spacing: em(2, 12); // расстояние между звездами
+        &::before {
+            content: "★★★★★";
+            display: block;
+        }
+    }
+
+    // .item-box-reviews__active
+
+    &__active {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        &::before {
+            content: "★★★★★";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #ffd300;
+        }
+    }
+
+    // .item-box-reviews__items
+
+    &__items {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    // .item-box-reviews__item
+
+    &__item {
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    // .item-box-reviews__value
+
+    &__value {
+        display: none;
+    }
+}
+
+//=============================================================
+
+.bottom-box-featured {
+    // .bottom-box-featured__rating
+
+    &__rating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: rem(12); // размер звезд
+        line-height: 0.75;
+    }
+
+    // .bottom-box-featured__body
+
+    &__body {
+        position: relative;
+        letter-spacing: em(2, 12); // расстояние между звездами
+        &::before {
+            content: "★★★★★";
+            display: block;
+        }
+    }
+
+    // .bottom-box-featured__active
+
+    &__active {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        &::before {
+            content: "★★★★★";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #ffd300;
+        }
+    }
+    // .bottom-box-featured__items
+    &__items {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    // .bottom-box-featured__item
+
+    &__item {
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    // .bottom-box-featured__value
+
+    &__value {
+        display: none;
+    }
+}
+
+//=============================================================
+
+.popup-review {
+    // .popup-review__rating
+
+    &__rating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: rem(40); // размер звезд
+        line-height: 0.75;
+    }
+
+    // .popup-review__body
+
+    &__body {
+        position: relative;
+        letter-spacing: em(11, 40); // расстояние между звездами
+        &::before {
+            content: "☆☆☆☆☆";
+            display: block;
+            color: rgba(139, 137, 128, 1);
+        }
+    }
+
+    // .popup-review__active
+
+    &__active {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        &::before {
+            content: "★★★★★";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #ffd300;
+        }
+    }
+    // .popup-review__items
+    &__items {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    // .popup-review__item
+
+    &__item {
+        flex: 0 0 20%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    // .popup-review__value
+
+    &__value {
+        display: none;
+    }
+}

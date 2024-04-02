@@ -1,0 +1,54 @@
+.radio {
+    position: relative;
+    &:not(:last-child) {
+        margin-bottom: em(10);
+    }
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        &:focus + .radio__label::before {
+            // box-shadow: 0 0 rem(5) #000;
+        }
+        &:checked + .radio__label::before {
+            border: 1.5px solid #bb8c5f;
+        }
+        &:checked + .radio__label::after {
+            transform: scale(1);
+        }
+    }
+    &__label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        gap: rem(10);
+        &::before {
+            content: "";
+            align-self: flex-start;
+            flex: 0 0 rem(20);
+            width: rem(20);
+            height: rem(20);
+            border: 1.5px solid #bb8c5f;
+            border-radius: 50%;
+        }
+        &::after {
+            content: "";
+            transition: all 0.3s ease 0s;
+            transform: scale(0);
+            position: absolute;
+            width: rem(10);
+            height: rem(10);
+            top: rem(5);
+            left: rem(5);
+            background-color: #bb8c5f;
+            border-radius: 50%;
+        }
+    }
+    &__text {
+        font-size: rem(17);
+        line-height: math.div(17, 17);
+        white-space: nowrap;
+    }
+}

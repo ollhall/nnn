@@ -1,0 +1,60 @@
+.breadcrumbs {
+  // white-space: nowrap;
+  // overflow: auto;
+  height: rem(22);
+  @include adaptiv-value("margin-top", 64, 50, 1);
+  margin-bottom: rem(24);
+
+  &__wrapper {
+    @include adaptiv-value("padding-left", 15, 0, 1);
+    @include adaptiv-value("padding-right", 15, 0, 1);
+  }
+
+  // .breadcrumbs__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  // .breadcrumbs__item
+
+  &__item {
+    font-size: rem(14);
+    letter-spacing: em(-0.14, 14);
+    color: $blueNavy;
+  }
+
+  // .breadcrumbs__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease 0s;
+    span {
+      border-bottom: rem(1) solid $blueNavy;
+    }
+
+    &::after {
+      content: "\e908";
+      @extend %ic;
+      font-size: rem(8);
+      margin: 0 em(8, 8);
+    }
+    // @media (any-hover: hover) {
+    //     &:hover {
+    //         color: $mainBlue;
+    //     }
+    // }
+  }
+
+  // .breadcrumbs__current
+
+  &__current {
+    max-width: rem(340);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

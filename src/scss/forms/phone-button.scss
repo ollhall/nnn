@@ -1,0 +1,73 @@
+@keyframes phone-button-animation {
+    0%,
+    10%,
+    100% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+        transform: rotate(0) scale(1) skew(1deg);
+    }
+
+    2%,
+    6% {
+        -webkit-transform: rotate(-15deg) scale(1) skew(1deg);
+        transform: rotate(-15deg) scale(1) skew(1deg);
+    }
+
+    4%,
+    8% {
+        -webkit-transform: rotate(15deg) scale(1) skew(1deg);
+        transform: rotate(15deg) scale(1) skew(1deg);
+    }
+}
+
+@-webkit-keyframes phone-button-animation {
+    0%,
+    10%,
+    100% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+        transform: rotate(0) scale(1) skew(1deg);
+    }
+
+    2%,
+    6% {
+        -webkit-transform: rotate(-15deg) scale(1) skew(1deg);
+        transform: rotate(-15deg) scale(1) skew(1deg);
+    }
+
+    4%,
+    8% {
+        -webkit-transform: rotate(15deg) scale(1) skew(1deg);
+        transform: rotate(15deg) scale(1) skew(1deg);
+    }
+}
+
+.phone-button {
+    position: fixed;
+    z-index: 5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500%;
+    bottom: 5%;
+    right: 3%;
+    animation: phone-button 1.5s ease;
+}
+
+@keyframes phone-button {
+    0% {
+        transform: translateX(300%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+
+.phone-button svg.phone-button-icon path {
+    fill: hsl(0, 0%, 97%);
+    -webkit-animation: phone-button-animation 5s ease-in-out infinite;
+    animation: phone-button-animation 5s ease-in-out infinite;
+    transform-origin: 50% 50%;
+}

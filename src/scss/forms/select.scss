@@ -1,0 +1,75 @@
+// SELECT ======================================================================================
+
+.dropdown {
+    position: relative;
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: row-reverse;
+        cursor: pointer;
+        &::before {
+            font-size: rem(12);
+            margin-left: rem(10);
+            transition: transform 0.3s ease 0s;
+        }
+        &--active {
+            &::before {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+    &__list {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+        position: absolute;
+        left: 0;
+        top: rem(25);
+        overflow: hidden;
+        width: 100%;
+        z-index: 7;
+    }
+    &__list--visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__list-item {
+        cursor: pointer;
+    }
+    &__input-hidden {
+        display: none;
+    }
+}
+
+.catalog-dropdown {
+    &__button {
+        width: rem(150);
+        line-height: math.div(26, 20);
+        color: $mainColor;
+        white-space: nowrap;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+        padding: rem(10);
+        line-height: math.div(26, 20);
+        color: $mainColor;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #fff;
+    }
+    &__item {
+        white-space: nowrap;
+    }
+    &__link {
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+               color: $hoverColor;
+               text-decoration: underline;
+            }
+        }
+    }
+}
